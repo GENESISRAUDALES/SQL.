@@ -1,0 +1,36 @@
+# SQL.
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, size TEXT, color TEXT, price INTEGER, collection TEXT, designer TEXT);
+INSERT INTO store VALUES (1,"top","s","black",30,"spring2023","tatisky");
+INSERT INTO store VALUES (2,"top-backless","m","white",35,"summer2023","vanessa");
+INSERT INTO store VALUES (3,"crop-top","m","white",25,"summer2023","vanessa");
+INSERT INTO store VALUES (4,"mesh-top","s","black",40,"summer2023","vanessa");
+INSERT into store VALUES (5,"dress","l","blue",50,"summer2023","vanessa");
+INSERT INTO store VALUES (6,"mini-dress","s","denim",70,"summer2023","vanessa");
+INSERT INTO store VALUES (7,"short","m","white",35,"summer2023","vanessa");
+INSERT INTO store VALUES (8,"mini-short","m","denim",40,"summer2023","vanessa");
+INSERT INTO store VALUES (9,"pants","s","black",30,"spring2023","tatisky");
+INSERT INTO store VALUES (10,"flow-pants","l","white",25,"summer2023","vanessa");
+INSERT INTO store VALUES (11,"sweatpants","l","white",35,"spring2023","tatisky");
+INSERT INTO store VALUES (12,"leggins","m","beige",25,"spring2023","taisky");
+INSERT INTO store VALUES (13,"overalls","l","denim",40,"spring2023","tatisky");
+INSERT INTO store VALUES (14,"bodysuit","s","beige",25,"summer2023","vanessa");
+INSERT INTO store VALUES (15,"jacket","m","denim",150,"spring2023","tatisky");
+
+Display, database ordey by price.
+SELECT * FROM store WHERE price ORDER BY price;
+
+
+Display all products under 50 dollars?
+SELECT * FROM store WHERE price <50;
+
+Whats the average price in the store?
+SELECT AVG(price) "avg bulk item price" FROM STORE;
+
+Display all small sizes?
+SELECT * from store WHERE (size) ="m";
+
+how many items can you purchase being Medium size that are under 35 dollars?
+SELECT * FROM store WHERE (size) ="m" AND price =35
+
+
+
